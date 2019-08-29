@@ -1,2 +1,4 @@
 name: Tobias Farrenkopf
 markdown: kramdown
+
+theme: jekyll-theme-slate
