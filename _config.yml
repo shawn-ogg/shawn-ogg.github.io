@@ -1,6 +1,6 @@
 name: Tobias Farrenkopf
 markdown: kramdown
-theme: jekyll-theme-hacker
+theme: jekyll-theme-slate
 title: emptyset.de
 description: "Curiosity killed the cat"
 show_downloads: "false"
