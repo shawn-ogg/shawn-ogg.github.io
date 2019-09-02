@@ -3,4 +3,4 @@ markdown: kramdown
 theme: jekyll-theme-hacker
 title: emptyset.de
 description: "Curiosity killed the cat"
-show_downloads: "false"
+show_downloads: false
