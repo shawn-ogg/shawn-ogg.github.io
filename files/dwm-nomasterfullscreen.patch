@@ -1,0 +1,30 @@
+From eff51e3031caefff401be0681e87cf40a907bcfc Mon Sep 17 00:00:00 2001
+From: Tobias Farrenkopf <tf@emptyset.de>
+Date: Sun, 9 Aug 2020 16:26:06 +0200
+Subject: [PATCH] nomasterfullscreen
+
+- prevent the master area to occupy the full screen if only
+  one client exists
+---
+ dwm.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/dwm.c b/dwm.c
+index 9fd0286..baee2e8 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -1681,10 +1681,7 @@ tile(Monitor *m)
+ 	if (n == 0)
+ 		return;
+ 
+-	if (n > m->nmaster)
+-		mw = m->nmaster ? m->ww * m->mfact : 0;
+-	else
+-		mw = m->ww;
++	mw = m->nmaster ? m->ww * m->mfact : 0;
+ 	for (i = my = ty = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
+ 		if (i < m->nmaster) {
+ 			h = (m->wh - my) / (MIN(n, m->nmaster) - i);
+-- 
+2.28.0
+
