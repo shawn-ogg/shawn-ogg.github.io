@@ -32,10 +32,12 @@
       </section>
     </div>
 
+    {% if page.title != 'impressum' %}
     <footer>
 	    <hr/>
 	    <p><a href="./impressum.html">Impressum</a></p>
     </footer>
+    {% endif %}
 
     {% if site.google_analytics %}
       <script>
